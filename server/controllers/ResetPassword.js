@@ -20,7 +20,7 @@ exports.resetPasswordToken=async (req,res)=>{
             resetPasswordExpires:Date.now()+5*60*1000,
         },
         {new:true});
-    const url=`http://localhost:3000/update-password/${token}`
+    const url=`http://pitrade.vercel.app/update-password/${token}`
     console.log(`Password Reset Link: ${url}`)
     await mailSender(email,"Password Reset Link",
     `Password Reset Link: ${url}`)
