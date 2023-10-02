@@ -136,46 +136,46 @@ export default function ProductInformationForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-8 rounded-md border-[3px] w-[70%] border-richblack-700 bg-slate-100 p-6"
+      className="space-y-8 rounded-md border-[3px] w-[70%]  bg-slate-100 p-6"
     >
       {/* product Title */}
       <div className="flex flex-col space-y-2">
-        <label className="text-sm text-richblack-5" htmlFor="productTitle">
-          Product Title <sup className="text-pink-200">*</sup>
+        <label className="text-sm " htmlFor="productTitle">
+          Product Title <sup className="text-pink-600">*</sup>
         </label>
         <input
           id="productTitle"
           placeholder="Enter product Title"
           {...register("productTitle", { required: true })}
-          className="rounded-lg bg-slate-200 p-3 text-[16px] leading-[24px] text-richblack-5 shadow-[0_1px_0_0] shadow-white/50 placeholder:text-richblack-400 focus:outline-none w-full"
+          className="rounded-lg bg-slate-200 p-3 text-[16px] leading-[24px]  shadow-[0_1px_0_0] shadow-white/50  focus:outline-none w-full"
         />
         {errors.productTitle && (
-          <span className="ml-2 text-xs tracking-wide text-pink-200">
+          <span className="ml-2 text-xs tracking-wide text-pink-600">
             Product title is required
           </span>
         )}
       </div>
       {/* product Short Description */}
       <div className="flex flex-col space-y-2">
-        <label className="text-sm text-richblack-5" htmlFor="productShortDesc">
-          Product Short Description <sup className="text-pink-200">*</sup>
+        <label className="text-sm " htmlFor="productShortDesc">
+          Product Short Description <sup className="text-pink-600">*</sup>
         </label>
         <textarea
           id="productShortDesc"
           placeholder="Enter Description"
           {...register("productShortDesc", { required: true })}
-          className="rounded-lg bg-slate-200 p-3 text-[16px] leading-[24px] text-richblack-5 shadow-[0_1px_0_0] shadow-white/50 placeholder:text-richblack-400 focus:outline-none resize-x-none min-h-[130px] w-full"
+          className="rounded-lg bg-slate-200 p-3 text-[16px] leading-[24px]  shadow-[0_1px_0_0] shadow-white/50  focus:outline-none resize-x-none min-h-[130px] w-full"
         />
         {errors.productShortDesc && (
-          <span className="ml-2 text-xs tracking-wide text-pink-200">
+          <span className="ml-2 text-xs tracking-wide text-pink-600">
             Product Description is required
           </span>
         )}
       </div>
       {/* product Price */}
       <div className="flex flex-col space-y-2">
-        <label className="text-sm text-richblack-5" htmlFor="productPrice">
-          Product Price <sup className="text-pink-200">*</sup>
+        <label className="text-sm " htmlFor="productPrice">
+          Product Price <sup className="text-pink-600">*</sup>
         </label>
         <div className="relative">
           <input
@@ -188,26 +188,26 @@ export default function ProductInformationForm() {
                 value: /^(0|[1-9]\d*)(\.\d+)?$/,
               },
             })}
-            className="rounded-lg bg-slate-200 p-3 text-[16px] leading-[24px] text-richblack-5 shadow-[0_1px_0_0] shadow-white/50 placeholder:text-richblack-400 focus:outline-none w-full !pl-12"
+            className="rounded-lg bg-slate-200 p-3 text-[16px] leading-[24px]  shadow-[0_1px_0_0] shadow-white/50  focus:outline-none w-full !pl-12"
           />
-          <HiOutlineCurrencyRupee className="absolute left-3 top-1/2 inline-block -translate-y-1/2 text-2xl text-richblack-400" />
+          <HiOutlineCurrencyRupee className="absolute left-3 top-1/2 inline-block -translate-y-1/2 text-2xl " />
         </div>
         {errors.productPrice && (
-          <span className="ml-2 text-xs tracking-wide text-pink-200">
+          <span className="ml-2 text-xs tracking-wide text-pink-600">
             Product Price is required
           </span>
         )}
       </div>
       {/* product Category */}
       <div className="flex flex-col space-y-2">
-        <label className="text-sm text-richblack-5" htmlFor="productCategory">
-          Product Category <sup className="text-pink-200">*</sup>
+        <label className="text-sm " htmlFor="productCategory">
+          Product Category <sup className="text-pink-600">*</sup>
         </label>
         <select
           {...register("productCategory", { required: true })}
           defaultValue=""
           id="productCategory"
-          className="rounded-lg bg-slate-200 p-3 text-[16px] leading-[24px] text-richblack-5 shadow-[0_1px_0_0] shadow-white/50 placeholder:text-richblack-400 focus:outline-none w-full"
+          className="rounded-lg bg-slate-200 p-3 text-[16px] leading-[24px] shadow-[0_1px_0_0] shadow-white/50  focus:outline-none w-full"
         >
           <option value="" disabled>
             Choose a Category
@@ -220,7 +220,7 @@ export default function ProductInformationForm() {
             ))}
         </select>
         {errors.productCategory && (
-          <span className="ml-2 text-xs tracking-wide text-pink-200">
+          <span className="ml-2 text-xs tracking-wide text-pink-600">
             Product Category is required
           </span>
         )}
@@ -244,7 +244,7 @@ export default function ProductInformationForm() {
           <button
             onClick={() => dispatch(setStep(2))}
             disabled={loading}
-            className={`flex cursor-pointer items-center gap-x-2 rounded-md bg-richblack-300 py-[8px] px-[20px] font-semibold text-richblack-900`}
+            className={`flex cursor-pointer items-center gap-x-2 rounded-md py-[8px] px-[20px] font-semibold `}
           >
             Save Changes
           </button>
