@@ -1,4 +1,3 @@
-const { instance } = require("../config/razorpay")
 const Product = require("../models/Product")
 const crypto = require("crypto")
 const User = require("../models/User")
